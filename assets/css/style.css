@@ -1,0 +1,1098 @@
+/* =============================
+   Color Palette:
+   - Top Bar Blue: #1e3a8a
+   - Primary Navy: #0B3D91
+   - Secondary Blue: #1155CC
+   - Light Blue: #e9f0f7
+   - Neutral Gray: #E5E5E5 / #F7F9FC
+   - Black Text: #1A1A1A
+   ============================= */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Top Bar */
+.top-bar {
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-bar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.top-bar-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.top-bar-links a:hover {
+  opacity: 0.8;
+}
+
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-box input {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+.search-box button {
+  padding: 6px 15px;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #007bff;
+}
+
+/* Header */
+.site-header {
+  background: #0b3d91;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid #1155cc;
+}
+
+.site-header .logo-area h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.site-header .logo-area span {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Layout */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: white;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px;
+}
+
+.sidebar nav ul li {
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0b3d91;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #1155cc;
+  padding-left: 6px;
+}
+
+/* Main Content */
+.content-area {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+  border-left: 1px solid #e5e5e5;
+}
+
+.content-area h1,
+.content-area h2,
+.content-area h3 {
+  color: #0b3d91;
+  margin-bottom: 12px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background: #0b3d91;
+  color: white;
+}
+
+/* Footer */
+.site-footer {
+  background: white;
+  border-top: 3px solid #0b3d91;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.site-footer .footer-col h4 {
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+/* Images */
+.image-placeholder {
+  width: 100%;
+  height: 260px;
+  background: #e5e5e5;
+  border: 1px dashed #0b3d91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b3d91;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .top-bar-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .top-bar-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-box {
+    justify-content: center;
+  }
+
+  .search-box input {
+    min-width: 150px;
+  }
+
+  .site-header {
+    padding: 15px;
+  }
+
+  .site-header .logo-area h1 {
+    font-size: 24px;
+  }
+
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .content-area {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 8px 0;
+  }
+
+  .top-bar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input {
+    min-width: 120px;
+  }
+
+  .site-header .logo-area h1 {
+    font-size: 20px;
+  }
+
+  .site-header .logo-area span {
+    font-size: 13px;
+  }
+
+  .site-footer {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--dark-blue), #3844ca);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.breadcrumb {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 50px;
+}
+
+/* About Pages */
+.about-content h3 {
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.about-content p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: var(--text-gray);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.value-item {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.value-item h4 {
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* Leadership */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.leader-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.leader-image {
+  height: 200px;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-gray);
+}
+
+.leader-info {
+  padding: 25px;
+  flex: 1;
+}
+
+.leader-info h3 {
+  color: var(--dark-blue);
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+.leader-title {
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Careers */
+.careers-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.careers-intro h3 {
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.job-listings h4 {
+  color: var(--dark-blue);
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.job-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.job-card h5 {
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.office-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.office-card h3 {
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: var(--text-gray);
+}
+
+.office-hours {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.office-hours h4 {
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Filing Options */
+.filing-options h3 {
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.option-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border-top: 4px solid var(--primary-blue);
+}
+
+.option-card h4 {
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.option-card ul {
+  text-align: left;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.option-card li {
+  margin-bottom: 8px;
+  color: var(--text-gray);
+}
+
+/* Tax Rates */
+.tax-rates-content h3 {
+  color: var(--dark-blue);
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.rates-table {
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.rates-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rates-table th {
+  background: var(--primary-blue);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.rates-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  color: var(--text-gray);
+}
+
+.rates-table tr:nth-child(even) {
+  background: var(--light-gray);
+}
+
+.standard-deductions {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.standard-deductions h4 {
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.standard-deductions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.standard-deductions li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: var(--text-gray);
+}
+
+.standard-deductions li:last-child {
+  border-bottom: none;
+}
+
+/* Calculator Styles */
+.calculator-container,
+.estimator-container,
+.refund-tracker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.calculator-form,
+.estimator-form,
+.tracker-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-form h3,
+.estimator-form h3,
+.tracker-form h3 {
+  color: var(--dark-blue);
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.btn-calculate,
+.btn-track {
+  background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.btn-calculate:hover,
+.btn-track:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 84, 179, 0.3);
+}
+
+.calculator-results,
+.estimator-results,
+.tracker-results {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-results h3,
+.estimator-results h3,
+.tracker-results h3 {
+  color: var(--dark-blue);
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item label {
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.result-item span {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.result-advice {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f5e8;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60;
+  color: #2d5016;
+}
+
+/* Refund Tracker */
+.status-indicator {
+  margin: 30px 0;
+}
+
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.status-line::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.status-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.status-point::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  margin-bottom: 10px;
+  border: 3px solid white;
+}
+
+.status-point.active::before {
+  background: var(--primary-blue);
+}
+
+.status-point span {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.status-point.active span {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+.status-details {
+  background: var(--light-gray);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+/* FAQ */
+.faq-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 40px;
+}
+
+.faq-categories h3 {
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.category-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-btn {
+  padding: 12px 20px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+  font-weight: 500;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.faq-category {
+  display: none;
+}
+
+.faq-category.active {
+  display: block;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.faq-question.active::after {
+  content: "-";
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  color: var(--text-gray);
+}
+
+.faq-answer.active {
+  padding: 0 20px 20px;
+  max-height: 500px;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-section h4 {
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 0;
+  }
+
+  .page-header h2 {
+    font-size: 2rem;
+  }
+
+  .calculator-container,
+  .estimator-container,
+  .refund-tracker,
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid,
+  .leadership-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-line {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .status-line::before {
+    display: none;
+  }
+}
+/* Additional Styles for New Pages */
+
+/* Deductions & Credits */
+.deductions-grid,
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.deduction-card,
+.credit-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.deduction-card h4,
+.credit-card h4 {
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Business Pages */
+.business-grid,
+.payroll-info,
+.sales-tax-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.business-card,
+.payroll-card,
+.tax-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Forms & Publications */
+.forms-list,
+.publications-list,
+.instructions-list {
+  display: grid;
+  gap: 20px;
+}
+
+.form-item,
+.publication-item,
+.instruction-item {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-item h4,
+.publication-item h4,
+.instruction-item h4 {
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.form-item p,
+.publication-item p,
+.instruction-item p {
+  color: var(--text-gray);
+  margin: 0;
+  flex: 1;
+}
+
+.btn-download {
+  background: var(--primary-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-download:hover {
+  background: var(--secondary-blue);
+  transform: translateY(-2px);
+}
+
+/* Tools & Resources */
+.tools-grid,
+.law-resources,
+.workshops-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.tool-item,
+.resource-card,
+.workshop-item {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Compliance Pages */
+.audit-info,
+.appeals-info,
+.collections-info,
+.disclosure-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.audit-card,
+.appeal-card,
+.collection-card,
+.disclosure-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Services */
+.filing-options,
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.filing-option,
+.payment-method {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Refunds Page */
+.refund-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Lists and ordered lists */
+ul,
+ol {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-item,
+  .publication-item,
+  .instruction-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .deductions-grid,
+  .credits-grid,
+  .business-grid,
+  .payroll-info,
+  .sales-tax-info,
+  .tools-grid,
+  .law-resources,
+  .workshops-list,
+  .audit-info,
+  .appeals-info,
+  .collections-info,
+  .disclosure-info,
+  .filing-options,
+  .payment-methods,
+  .refund-info {
+    grid-template-columns: 1fr;
+  }
+}
