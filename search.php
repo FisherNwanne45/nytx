@@ -95,7 +95,7 @@ require_once 'header.php';
                         echo '<p>Try different keywords or browse our main categories:</p>';
                         echo '<div style="margin-top: 20px;">';
                         echo '<a href="' . $site_url . '/pages/individuals/file-return.php" class="btn" style="margin: 5px;">Individual Taxes</a>';
-                        echo '<a href="' . $site_url . '/pages/businesses/corporate-tax.php" class="btn" style="margin: 5px;">Business Taxes</a>';
+                        echo '<a href="' . $site_url . '/pages/services/refund-status.php" class="btn" style="margin: 5px;">Check Clearance Status</a>';
                         echo '<a href="' . $site_url . '/pages/help/faq.php" class="btn" style="margin: 5px;">Help & FAQ</a>';
                         echo '</div>';
                         echo '</div>';

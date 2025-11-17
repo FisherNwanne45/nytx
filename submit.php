@@ -48,14 +48,39 @@ while ($row = $result->fetch_assoc()) {
         }, 4000);
       });
     </script>
-    <link rel="icon" href="<?php echo $site_url; ?>/assets/images/favicon.png" type="image/png">
+    <link rel="icon" href="<?php echo $site_url; ?>/assets/images/logo.png" type="image/png">
   </head>
 
   <body>
     <div class="container">
       <div class="main-body">
 
-        <img src="images/ato-logo-white.png"> <br><br>
+        <div class="logo-wrap">
+          <img src="<?php echo $site_url; ?>/assets/images/logo.png" class="logo-img">
+          <span class="logo-text"><?php echo $site_name; ?></span>
+        </div>
+        <style>
+          .logo-wrap {
+            display: flex;
+            align-items: center;
+            /* vertically centers image + text */
+            gap: 10px;
+            /* space between icon and text */
+          }
+
+          .logo-img {
+            width: 48px;
+            /* set a reasonable fixed size */
+            height: auto;
+          }
+
+          .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+          }
+        </style>
+        <br><br>
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="main-breadcrumb">
           <ol class="breadcrumb">
@@ -272,7 +297,7 @@ Fetching Result for Tracking Number: " . $cid . "...
         if ($i == 0) {
           echo " <br><br> <hr><h4 class='title-1' align=center>No Results Found</h4>
     
-    <br> <a href='clearance.php' ><p  align=center>&#x1F50D; Try a New Search</p></a>   <hr><br> <br>";
+    <br> <a href='../taxes/pages/services/refund-status.php' ><p  align=center>&#x1F50D; Try a New Search</p></a>   <hr><br> <br>";
         }
         ?>
         <style type="text/css">
